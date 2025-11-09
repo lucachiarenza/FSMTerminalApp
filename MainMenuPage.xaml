@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="FSMTerminalApp.MainMenuPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Menu Principale">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <Label Text="Seleziona operazione:"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Grid per i pulsanti -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" RowSpacing="15" ColumnSpacing="15">
+
+                <!-- Venduto -->
+                <Button x:Name="VendutoButton"
+                        Text="VENDUTO"
+                        Clicked="OnVendutoClicked"
+                        Grid.Row="0" Grid.Column="0"
+                        BackgroundColor="#4CAF50"
+                        TextColor="White"
+                        HeightRequest="120"
+                        FontSize="16"
+                        FontAttributes="Bold" />
+
+                <!-- Movimenti -->
+                <Button x:Name="MovimentiButton"
+                        Text="MOVIMENTI"
+                        Clicked="OnMovimentiClicked"
+                        Grid.Row="0" Grid.Column="1"
+                        BackgroundColor="#2196F3"
+                        TextColor="White"
+                        HeightRequest="120"
+                        FontSize="16"
+                        FontAttributes="Bold" />
+
+                <!-- Resi -->
+                <Button x:Name="ResiButton"
+                        Text="RESI"
+                        Clicked="OnResiClicked"
+                        Grid.Row="1" Grid.Column="0"
+                        BackgroundColor="#FF9800"
+                        TextColor="White"
+                        HeightRequest="120"
+                        FontSize="16"
+                        FontAttributes="Bold" />
+
+                <!-- Inventario -->
+                <Button x:Name="InventarioButton"
+                        Text="INVENTARIO"
+                        Clicked="OnInventarioClicked"
+                        Grid.Row="1" Grid.Column="1"
+                        BackgroundColor="#9C27B0"
+                        TextColor="White"
+                        HeightRequest="120"
+                        FontSize="16"
+                        FontAttributes="Bold" />
+
+            </Grid>
+
+            <!-- Pulsante Indietro -->
+            <Button Text="INDIETRO"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="#666666"
+                    TextColor="White"
+                    Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
